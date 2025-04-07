@@ -5,41 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy - GymACT Road2Nationals Content Uploader</title>
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; line-height: 1.6; }
-    h1, h2 { color: #222; }
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    h1 img {
+      width: 60px;
+      height: 60px;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    hr {
+      margin: 24px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> [Insert Date]</p>
+  <h1>
+    <span>📄 Privacy Policy for GymACT <strong>Road2Nationals</strong> Content Uploader</span>
+    <img src="logo.png" alt="Extension Logo">
+  </h1>
 
-  <p>This Chrome Extension allows users to upload gymnastics competition videos from their Google Drive to YouTube, optionally organizing them into playlists. This tool is not affiliated with RoadToNationals.com.</p>
+  <p><strong>Last Updated:</strong> 4/6/2025</p>
+  <p>This Chrome Extension is designed to help users upload competition videos from their Google Drive to YouTube and optionally organize them into playlists. This tool is not affiliated with or endorsed by RoadToNationals.com.</p>
+
+  <hr />
 
   <h2>What data do we collect?</h2>
-  <p><strong>None.</strong> We do not collect or store any personal or sensitive user information.</p>
-
-  <h2>OAuth Access</h2>
-  <p>This extension uses Google OAuth to request permission to access:</p>
+  <p>We do <strong>not</strong> collect or store any personal data.</p>
+  <p>This extension temporarily uses a Google OAuth token (with your permission) to:</p>
   <ul>
-    <li>Read-only access to the user's Google Drive (to find video files)</li>
-    <li>Upload permissions to the user's YouTube account (to upload videos and manage playlists)</li>
+    <li>View folders and videos in your Google Drive</li>
+    <li>Upload selected videos to your YouTube account</li>
+    <li>Optionally create playlists and add videos to them</li>
   </ul>
-  <p>All access is done with the user's explicit consent. Tokens are stored only temporarily in browser storage for the duration of the session.</p>
 
-  <h2>Where is data stored?</h2>
-  <p>No personal data is stored. Access tokens are held only in <code>chrome.storage.local</code> during active use and never sent to any third-party server.</p>
+  <hr />
 
-  <h2>What is shared?</h2>
-  <p>Nothing is shared with external services. Video content remains on the user's Google Drive and YouTube accounts. No analytics or user behavior tracking is implemented.</p>
-
-  <h2>Permissions Used</h2>
+  <h2>Where is your data stored?</h2>
   <ul>
-    <li><strong>identity:</strong> for OAuth login</li>
-    <li><strong>storage:</strong> to store temporary OAuth access tokens</li>
-    <li><strong>host_permissions:</strong> to communicate with Google APIs</li>
+    <li>Access tokens are stored temporarily in your browser using <code>chrome.storage.local</code> during the session.</li>
+    <li>No data is stored on any external server.</li>
+    <li>We do not track, log, or analyze your behavior.</li>
   </ul>
+
+  <hr />
+
+  <h2>Is any data shared?</h2>
+  <p>No. Your Drive and YouTube content stays private unless you explicitly publish it on YouTube. The extension does not share your data with any third parties.</p>
+
+  <hr />
+
+  <h2>Authentication</h2>
+  <p>We use secure, official Google APIs for OAuth authentication and access to your Drive/YouTube accounts.</p>
+
+  <hr />
+
+  <h2>Permissions</h2>
+  <p>This extension requests only the following permissions:</p>
+  <ul>
+    <li><strong>identity:</strong> to authenticate with Google</li>
+    <li><strong>storage:</strong> to remember access tokens temporarily</li>
+    <li><strong>https://www.googleapis.com/*:</strong> to access Drive and YouTube APIs</li>
+  </ul>
+
+  <hr />
 
   <h2>Contact</h2>
-  <p>If you have any questions about this policy, please contact us at [your-email@example.com]</p>
+  <p>If you have questions, reach out to <a href="mailto:victorjb2015@gmail.com">victorjb2015@gmail.com</a>.</p>
 </body>
 </html>
