@@ -39,52 +39,49 @@
     <img src="logo.png" alt="Extension Logo">
   </h1>
 
-  <p><strong>Last Updated:</strong> 4/6/2025</p>
+  <p><strong>Last Updated:</strong> May 18, 2025</p>
   <p>This Chrome Extension is designed to help users upload competition videos from their Google Drive to YouTube and optionally organize them into playlists. This tool is not affiliated with or endorsed by RoadToNationals.com.</p>
 
   <hr />
 
-  <h2>What data do we collect?</h2>
-  <p>We do <strong>not</strong> collect or store any personal data.</p>
-  <p>This extension temporarily uses a Google OAuth token (with your permission) to:</p>
+  <h2>What Information Do We Access?</h2>
+  <p>This extension uses your Google account (via OAuth 2.0) to temporarily access the following information with your permission:</p>
   <ul>
-    <li>View folders and videos in your Google Drive</li>
-    <li>Upload selected videos to your YouTube account</li>
-    <li>Optionally create playlists and add videos to them</li>
+    <li>File names and IDs of videos in your selected Google Drive folders</li>
+    <li>Video metadata (e.g., title, ID, and upload status) associated with your YouTube account</li>
+    <li>Optionally, playlists to which you add videos</li>
+  </ul>
+  <p>We do <strong>not</strong> collect, store, or transmit any personal data such as your name, email address, contacts, or account details.</p>
+
+  <hr />
+
+  <h2>Where Is Your Data Stored?</h2>
+  <ul>
+    <li>Access tokens are stored locally in your browser using <code>chrome.storage.local</code> for the duration of your session.</li>
+    <li>No user data is transmitted to or stored on any external servers.</li>
+    <li>We do not track, log, analyze, or monetize your usage behavior in any way.</li>
   </ul>
 
   <hr />
 
-  <h2>Where is your data stored?</h2>
+  <h2>Is Your Data Shared?</h2>
+  <p>No. Your Google Drive and YouTube data is never shared with third parties. The extension only uses your account data to complete the video upload tasks that you initiate. Any videos uploaded to YouTube remain private or unlisted unless you choose otherwise.</p>
+
+  <hr />
+
+  <h2>Authentication & Permissions</h2>
+  <p>We use official Google APIs for secure authentication and access:</p>
   <ul>
-    <li>Access tokens are stored temporarily in your browser using <code>chrome.storage.local</code> during the session.</li>
-    <li>No data is stored on any external server.</li>
-    <li>We do not track, log, or analyze your behavior.</li>
+    <li><strong>identity:</strong> To authenticate your Google account</li>
+    <li><strong>storage:</strong> To store session data temporarily</li>
+    <li><strong>https://www.googleapis.com/auth/drive.readonly:</strong> To list and access your videos in Drive</li>
+    <li><strong>https://www.googleapis.com/auth/youtube.force-ssl:</strong> To upload videos and manage playlists on your YouTube account</li>
   </ul>
-
-  <hr />
-
-  <h2>Is any data shared?</h2>
-  <p>No. Your Drive and YouTube content stays private unless you explicitly publish it on YouTube. The extension does not share your data with any third parties.</p>
-
-  <hr />
-
-  <h2>Authentication</h2>
-  <p>We use secure, official Google APIs for OAuth authentication and access to your Drive/YouTube accounts.</p>
-
-  <hr />
-
-  <h2>Permissions</h2>
-  <p>This extension requests only the following permissions:</p>
-  <ul>
-    <li><strong>identity:</strong> to authenticate with Google</li>
-    <li><strong>storage:</strong> to remember access tokens temporarily</li>
-    <li><strong>https://www.googleapis.com/*:</strong> to access Drive and YouTube APIs</li>
-  </ul>
+  <p>These permissions are requested only when needed and are used strictly to enable the extension’s core functionality.</p>
 
   <hr />
 
   <h2>Contact</h2>
-  <p>If you have questions, reach out to <a href="mailto:victorjb2015@gmail.com">victorjb2015@gmail.com</a>.</p>
+  <p>If you have any questions about this policy or how your data is used, please contact <a href="mailto:victorjb2015@gmail.com">victorjb2015@gmail.com</a>.</p>
 </body>
 </html>
