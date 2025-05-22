@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="privacy-policy.css">
+  <link rel="shortcut icon" type="image/x-icon" href="icons/favicon.ico">
+  <title>Privacy Policy - GymACT Road2Nationals Uploader</title>
+</head>
+<body>
+  <header>
+    <h1>Privacy Policy for GymACT&nbsp;Road2Nationals&nbsp;Uploader</h1>
+    <a href="index.html">
+      <img class="logo-right" src="icons/logo.png" alt="Road2Nationals Extension Logo">
+    </a>
+  <p class="sub">Last Updated: May 22, 2025</p>
+  </header>
+
+  <div class="content">
+    <h2>1 - Overview</h2>
+    <p>
+      This Chrome extension helps users upload collegiate gymnastics videos
+      from Google Drive to YouTube and then <em>optionally</em> autofill the
+      resulting YouTube IDs into the
+      <a href="https://roadtonationals.com/" target="_blank" rel="noopener">Road-to-Nationals</a>
+      meet-video entry page.  
+      The tool is <strong>not affiliated with or endorsed by Road-to-Nationals</strong>.
+    </p>
+
+    <h2>2 - Data We Access</h2>
+    <ul>
+      <li><strong>Google Drive (read-only)</strong> - file names &amp; IDs of the videos you
+          select for upload.</li>
+      <li><strong>YouTube Channel</strong> - video IDs, titles you assign, and playlist IDs
+          you create with the extension.</li>
+      <li><strong>Local Session Object</strong> - current upload queue, custom titles,
+          and progress index (persisted in <code>chrome.storage.local</code> so
+          you can resume after closing the popup).</li>
+    </ul>
+    <p>We do <em>not</em> access your email address, contacts, or any other personal profile data.</p>
+
+    <h2>3 - Where &amp; How Long We Store It</h2>
+    <ul>
+      <li><strong>Access tokens</strong> - encrypted by Chrome and kept in
+          <code>chrome.storage.local</code> only for the life of
+          your browser session.</li>
+      <li><strong>Upload-session object</strong> - removed automatically when every
+          video in the queue finishes uploading.</li>
+      <li>No data ever leaves your browser; the extension has <strong>no remote
+          backend or analytics</strong>.</li>
+    </ul>
+
+    <h2>4 - Chrome Permissions &amp; Google API Scopes</h2>
+    <table>
+      <thead><tr><th>Permission / Scope</th><th>Why We Need It</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><code>identity</code></td>
+          <td>Launches Google OAuth so you can grant Drive &amp; YouTube access.</td>
+        </tr>
+        <tr>
+          <td><code>storage</code></td>
+          <td>Keeps your access token &amp; unfinished upload queue in
+              <code>chrome.storage.local</code>.</td>
+        </tr>
+        <tr>
+          <td><code>activeTab</code></td>
+          <td>After you click “Autofill YouTube IDs,” the extension reads the
+              URL of the <em>current</em> tab to confirm it really is a
+              <code>roadtonationals.com/results</code> page before doing
+              anything else.</td>
+        </tr>
+        <tr>
+          <td><code>scripting</code></td>
+          <td>Lets us inject a short content-script that fills the YouTube-ID
+              input boxes on Road-to-Nationals <strong>only after you press the
+              button</strong>. The script touches no other site, cookies, or
+              network traffic.</td>
+        </tr>
+        <tr>
+          <td><code>https://www.googleapis.com/auth/drive.readonly</code></td>
+          <td>Lists videos you select in Google Drive.</td>
+        </tr>
+        <tr>
+          <td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td>
+          <td>Uploads videos, sets titles/descriptions, and (optionally) creates
+              playlists on your YouTube channel.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5 - Data Sharing</h2>
+    <p>
+      We never sell or share your data. Everything the extension does happens
+      on your computer and with Google's own APIs.
+      Videos you upload remain <em>Private</em> or <em>Unlisted</em> unless you
+      change the visibility yourself in YouTube Studio.
+    </p>
+
+    <h2>6 - Your Controls</h2>
+    <ul>
+      <li>Clear the current upload queue at any time via the “X” button in the
+          popup — that also deletes the session object from local storage.</li>
+      <li>Revoke the extension's Google access token from
+          <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+            Google Account › Security › Third-party access
+          </a>.</li>
+      <li>Uninstall the extension to remove all local data instantly.</li>
+    </ul>
+
+    <h2>7 - Changes to This Policy</h2>
+    <p>
+      If we ever broaden the extension's functionality or required permissions
+      we'll update this document and bump the “Last Updated” date above.
+    </p>
+
+    <h2>8 - Contact</h2>
+    <p>
+      Questions? Email 
+      <a href="mailto:victorjb2015@gmail.com">victorjb2015@gmail.com</a>.
+    </p>
+  </div>
+
+  <footer>
+    <p>© 2025 GymACT Road2Nationals Uploader. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

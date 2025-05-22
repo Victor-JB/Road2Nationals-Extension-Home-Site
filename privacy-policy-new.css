@@ -1,0 +1,84 @@
+/* ------- Layout like SCU helper ------------------------- */
+body {
+  font-family: sans-serif;
+  background:#f4f4f4;
+  margin:0;
+}
+
+/* ---------- HEADER tweaks ------------------------------ */
+header {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:24px 8px 28px;
+  background:#862633;
+  color:#fff;
+
+header h1 {
+  margin:0;
+  font-size:2.4rem;
+  font-weight:700;
+  text-align:center;
+}
+
+/* keep the logo small and inline with text */
+header img {
+  height:48px;
+  vertical-align:middle;
+  margin-right:12px;
+}
+
+header .sub {
+  margin-top:6px;
+  font-size:1rem;
+  opacity:.85;
+}
+
+/* side logos, keep small and out of the flow */
+header .logo-left,
+header .logo-right {
+  position:absolute;
+  top:16px;
+  height:42px;
+}
+
+header .logo-left  { left:16px;  }
+header .logo-right { right:16px; }
+
+/* ---------- CARD (already present, only fine-tune) ------ */
+.content {            /* make sure you kept this wrapper */
+  width:90%;
+  max-width:960px;
+  margin:40px auto;
+  background:#fff;
+  padding:32px 38px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgb(0 0 0 / .08);
+}
+
+/* bullet spacing like sample */
+ul { padding-left:1.5em; margin-top:0.4em; }
+
+h2 { margin-top:46px; }
+
+/* ---------- footer stays the same ---------------------- */
+
+/* typography */
+h1 {font-size:2.5em;color:#333;margin-top:0;}
+h2 {font-size:1.8em;color:#862633;margin-top:30px;}
+p, li {font-size:1.1em;line-height:1.6;color:#555;}
+ul {padding-left:1.3em;}
+
+.content a {color:#862633;font-weight:bold;text-decoration:none;}
+.content a:hover {text-decoration:underline;}
+
+/* footer bar */
+footer {
+  background:#862633;
+  color:#fff;
+  text-align:center;
+  padding:15px;
+  margin-top:40px;
+}
+
+
